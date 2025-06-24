@@ -1,4 +1,4 @@
 pytest
-black
-isort
-flake8
+black # 코드 포맷터
+isort # 임포트 정렬
+flake8 # 코드 린터

@@ -14,7 +14,7 @@ venv/
 .vscode/
 
 # Environment Variables
-.env
+.env # .env 파일을 Git 추적에서 제외
 
 # Data directories
 data/vector_store/  # ChromaDB 같은 벡터 DB 저장 폴더

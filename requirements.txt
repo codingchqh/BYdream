@@ -1,10 +1,11 @@
 fastapi
-uvicorn
+uvicorn[standard] # uvicorn과 함께 httptools, watchfiles 등 포함
 langchain
 langchain-community
 langchain-openai
-pydantic-settings
-python-multipart
-openai
-sqlalchemy
-python-dotenv # .env 파일을 사용할 경우 (현재는 제거된 상태지만, 혹시 다시 쓸 경우 대비)
+pydantic-settings # 환경 변수 설정을 위해 필요
+python-multipart # 파일 업로드를 위해 필요
+openai # OpenAI API 클라이언트
+sqlalchemy[asyncio] # SQLAlchemy 코어 및 비동기 드라이버 (aiosqlite)
+aiosqlite # SQLite 비동기 드라이버 (DATABASE_URL에 사용)
+python-dotenv # .env 파일을 로드하기 위해 필요 (BaseSettings가 내부적으로 사용)
