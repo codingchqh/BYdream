@@ -1,3 +1,6 @@
+# C:\Users\user\Desktop\BYDream\BYdream\pyproject.toml
+# 이 파일을 열어서 아래 내용으로 정확히 덮어쓰거나 수정하세요.
+
 [project]
 name = "bydream"
 version = "0.1.0"
@@ -6,29 +9,16 @@ authors = [
     {name = "codingchqh",email = "dlgustj723@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.12,<3.13" # <<-- 이 부분이 정확한지 확인
 dependencies = [
-    "fastapi (>=0.115.13,<0.116.0)",
-    "uvicorn[standard] (>=0.34.3,<0.35.0)",
-    "pydantic-settings (>=2.10.0,<3.0.0)",
-    "langchain (>=0.3.26,<0.4.0)",
-    "langchain-community (>=0.3.26,<0.4.0)",
-    "langchain-openai (>=0.3.25,<0.4.0)",
-    "openai (>=1.91.0,<2.0.0)",
-    "sqlalchemy (>=2.0.41,<3.0.0)",
-    "aiosqlite (>=0.21.0,<0.22.0)",
-    "python-multipart (>=0.0.20,<0.0.21)",
-    "python-dotenv (>=1.1.1,<2.0.0)"
+    "python (>=3.12,<3.13)", # <<-- 이 부분도 정확한지 확인
 ]
 
+[tool.poetry] # <<-- 이 섹션이 정확히 이렇게 시작하고
+packages = [
+    { include = "app" } # <<-- 이 줄이 정확히 이렇게 있는지 확인
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.4.1"
-black = "^25.1.0"
-isort = "^6.0.1"
-flake8 = "^7.3.0"
-

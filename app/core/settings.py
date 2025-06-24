@@ -1,11 +1,11 @@
 # app/core/settings.py
-from pydantic_settings import BaseSettings, SettingsConfigDict
-import os
+from pydantic_settings import BaseSettings # SettingsConfigDict 임포트 제거
+# import os # os 모듈이 다른 곳에서 사용되지 않는다면 제거해도 무방합니다.
 
 class Settings(BaseSettings):
-    # .env 파일에서 환경 변수를 로드하도록 설정합니다.
-    # .env 파일이 없으면 시스템 환경 변수에서 찾습니다.
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    # .env 파일에서 환경 변수를 로드하는 설정을 완전히 제거합니다.
+    # 이제 Pydantic은 오직 시스템 환경 변수에서만 값을 찾습니다.
+    # model_config = SettingsConfigDict(env_file=".env", extra="ignore") # 이 줄을 제거합니다.
 
     PROJECT_NAME: str = "My Dream Project"
     PROJECT_VERSION: str = "0.1.0"
@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     # RAG Settings
     CHROMA_DB_PATH: str = "./data/vector_store"
     RAG_CHUNK_SIZE: int = 1000
+    
     RAG_CHUNK_OVERLAP: int = 200
 
     # AI Model Settings
@@ -35,12 +36,3 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-
-# 설정이 제대로 로드되었는지 확인하는 간단한 로깅 (선택 사항)
-# print(f"--- Settings Loaded ---")
-# print(f"Project Name: {settings.PROJECT_NAME}")
-# print(f"OpenAI API Key (first 5 chars): {settings.OPENAI_API_KEY[:5]}...")
-# print(f"Chroma DB Path: {settings.CHROMA_DB_PATH}")
-# print(f"Database URL: {settings.DATABASE_URL}")
-# print(f"Log Level: {settings.LOG_LEVEL}")
-# print(f"-----------------------")
