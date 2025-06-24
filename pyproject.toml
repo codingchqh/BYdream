@@ -1,5 +1,4 @@
 # C:\Users\user\Desktop\BYDream\BYdream\pyproject.toml
-# 이 파일을 열어서 아래 내용으로 정확히 덮어쓰거나 수정하세요.
 
 [project]
 name = "bydream"
@@ -9,14 +8,14 @@ authors = [
     {name = "codingchqh",email = "dlgustj723@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12,<3.13" # <<-- 이 부분이 정확한지 확인
+requires-python = ">=3.12,<3.13" # <<-- 이 부분 정확히
 dependencies = [
-    "python (>=3.12,<3.13)", # <<-- 이 부분도 정확한지 확인
+    "python (>=3.12,<3.13)", # <<-- 이 부분 정확히
 ]
 
-[tool.poetry] # <<-- 이 섹션이 정확히 이렇게 시작하고
+[tool.poetry]
 packages = [
-    { include = "app" } # <<-- 이 줄이 정확히 이렇게 있는지 확인
+    { include = "app" }
 ]
 
 [build-system]
