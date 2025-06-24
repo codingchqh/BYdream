@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# Environment Variables
+.env
+
+# Data directories
+data/vector_store/  # ChromaDB 같은 벡터 DB 저장 폴더

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-openai
+pydantic-settings
+python-multipart
+openai
+sqlalchemy
+python-dotenv # .env 파일을 사용할 경우 (현재는 제거된 상태지만, 혹시 다시 쓸 경우 대비)
